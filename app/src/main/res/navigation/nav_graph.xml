@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.daifratellikatalog.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_katalogFragment"
+            app:destination="@id/katalogFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_privatimportFragment"
+            app:destination="@id/privatimportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/katalogFragment"
+        android:name="com.example.daifratellikatalog.KatalogFragment"
+        android:label="fragment_katalog"
+        tools:layout="@layout/fragment_katalog" />
+    <fragment
+        android:id="@+id/privatimportFragment"
+        android:name="com.example.daifratellikatalog.PrivatimportFragment"
+        android:label="fragment_privatimport"
+        tools:layout="@layout/fragment_privatimport" />
+</navigation>
